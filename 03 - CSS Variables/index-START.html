@@ -22,10 +22,23 @@
   <img src="https://unsplash.it/800/500?image">
 
   <style>
+    :root{
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
 
-    /*
-      misc styles, nothing to do with CSS variables
-    */
+    img{
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    h1{
+      color: var(--base)
+    }
+
+   
 
     body {
       text-align: center;
@@ -45,7 +58,16 @@
     }
   </style>
 
-  <script>
+  <script>a
+    const input = document.querySelectorAll('.controls input');
+
+    function handleChange(){
+      const abc = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + abc);
+    }
+
+    input.forEach(input => input.addEventListener('change', handleChange));
+    input.forEach(input => input.addEventListener('mousemove', handleChange));
   </script>
 
 </body>
