@@ -27,6 +27,7 @@
     .panels {
       min-height: 100vh;
       overflow: hidden;
+      display:flex
     }
 
     .panel {
@@ -106,7 +107,13 @@
   </div>
 
   <script>
+   const panels = document.querySelectorAll(`.panel`);
+   const toggleOpen = (e) => {
+     const panel = e.currentTarget;
+     panel.classList.toggle('open');
+   };
 
+   panels.forEach(panel => panel.addEventListener('click', toggleOpen));
   </script>
 
 
