@@ -19,28 +19,53 @@
     }
 
     // Regular
+    console.log('Hello');
 
     // Interpolated
+    console.log('hello I am a %s ','Skillyard');
+
 
     // Styled
+    console.log('%c I am some great text', 'font-size: 50px; background: red; text-shadow: 10px ');
 
     // warning!
-
+    console.warn('OH NOOOO');
     // Error :|
-
+   console.error("tare")
     // Info
-
+ console.info('At Skillyard we offer 100% placement')
     // Testing
-
+ const p = document.querySelector('p');
+ console.assert(p.classList.contains('ouch'), 'this is wrong!');
     // clearing
 
+    console.clear();
     // Viewing DOM Elements
-
+console.log(p);
+console.dir(p);
     // Grouping together
+    dogs.forEach(dog => {
+  console.groupCollapsed(`${dog.name}: ${dog.age}`);
+  console.log(dog); 
+  console.groupEnd();
+});
 
     // counting
-
+ console.count('anuj');
+ console.count('anuj');
+ console.count('anuj');
+  console.count('anuj');
+   console.count('anuj');
+    console.count('anuj');
+     console.count('anuj');
     // timing
+    console.log('fetching data...');
+    fetch('https://api.github.com/users/ankurjha007')
+      .then(d => d.json())
+      .then(d => {
+        console.timeEnd('fetching data');
+        console.log(d);
+      });
 
   </script>
 </body>
