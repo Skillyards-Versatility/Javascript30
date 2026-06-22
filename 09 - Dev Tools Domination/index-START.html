@@ -19,29 +19,53 @@
     }
 
     // Regular
-
+    console.log("hello");
     // Interpolated
+    console.log(`hello i am %s `,'suhani')
 
     // Styled
+    console.log('%c i am some text','font-size:50px;color:red')
 
     // warning!
+    console.warn("ohh noooo")
+
 
     // Error :|
+    console.error("network issue..")
+
 
     // Info
+       console.info('At Skillyards we offer 100% placement')
 
     // Testing
-
+      const p = document.querySelector('p')
+      console.log(p.classList.contains('ouch','this is wrong'))
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
 
     // Grouping together
+       dogs.forEach(dog => {
+        console.groupCollapsed(`${dog.name}`)
+         console.groupCollapsed(`${dog.age}`)
+       });
 
     // counting
+    console.count('suhani')
+    console.count('khushi')
+    console.count('suhani')
 
     // timing
-
+    console.log('fetching data')
+    fetch('https://api.github.com/users/suhanim604-maker')
+    .then(d=> d.json())
+    .then(d => {
+      console.timeEnd('fetching your data')
+      console.log(d)
+    })
   </script>
 </body>
 </html>
