@@ -19,29 +19,58 @@
     }
 
     // Regular
+    console.log('hello guyz')
 
     // Interpolated
+    console.log('hello i am %s', 'tanu')
 
     // Styled
+    console.log('%c this is styled text', 'font-size:20px;color: red')
 
     // warning!
+    console.warn('oh noo!')
+  
 
     // Error :|
+    console.error("something is wrong")
+    
 
     // Info
+    console.info(dogs[1])
 
     // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('ouchh'), 'this is wrong')
+    
 
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+      console.log(`${dog.age}`)
+    })
 
     // counting
+    console.count('Tanu');
+    console.count('Tanu');
+    console.count('Tanu');
 
     // timing
+    console.log('fetching data')
+    fetch('https://api.github.com/users/tanusharma630')
+    .then(d => d.json())
+    .then(d => {
+      console.timeEnd("fetching your data")
+      console.log(d)
+    })
 
+    
   </script>
 </body>
 </html>
